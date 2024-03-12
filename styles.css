@@ -1,0 +1,229 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+header {
+    
+background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: right;
+    animation: fadeInTop 1s ease-in-out; 
+/* Fade in from top animation */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: 
+inline;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: 
+none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: skyblue; /* Color change on 
+hover */
+}
+
+main {
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out; /* Fade in animation */
+}
+
+.big-heading {
+    
+background-image: url('amul.jpg'); /* 
+Replace 'landscape.jpgqE=' with the 
+path to your landscape image */
+    background-size: cover; /* Cover the entire element 
+with the background image */
+    
+background-position: center; /* Center the background image */
+    padding: 40px 20px; /* 
+Increased padding */
+    text-align: 
+center;
+    margin-bottom: 20px; /* Added margin bottom */
+}
+
+.big-heading h1 {
+    margin-
+bottom: 10px;
+    color: white; /* Set 
+text color to white for better visibility */
+    opacity: 0; /* Initially set to 
+transparent */
+    animation: fadeInText 2s 
+ease-in-out forwards; /* Animation for fading in text */
+    text-shadow: 2px 2px 0 black;
+}
+
+.product-grid {
+    
+display: grid;
+  
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.product-card {
+    
+border: 1px solid 
+#ddd;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.5s ease; /* 
+Smooth transform 
+and opacity transition */
+    opacity: 0; /* Initially set to transparent */
+    animation: fadeInProducts 1s 
+ease-in-out 
+forwards; /* Fade in product boxes */
+}
+
+.product-card:hover {
+    transform: scale(1.1); /* Zoom in effect on hover 
+*/
+}
+
+.product-card img {
+    max-width: 100%;
+}
+
+.product-card button {
+    background-color: #333;
+    color: #fff;
+    border: 
+none;
+   
+ padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background color transition 
+*/
+}
+
+.big-heading p {
+    color: yellow; /* Change text color to yellow */
+    text-shadow: 1px 1px 0 black; /* Black outline with 
+horizontal and vertical offset of 1px */
+    display: inline; /* Ensure inline display for proper text styling */
+}
+
+.product-
+card button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-
+align: 
+center;
+    
+padding: 10px 20px; /* Adjusted padding */
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 40px); 
+/* 
+Adjusted width 
+*/
+    animation: fadeInBottom 1s ease-in-out; /* Fade in from bottom animation */
+}
+
+footer p {
+    margin: 0;
+ 
+   
+display: 
+inline;
+    float: center;
+}
+
+footer p.contact-info {
+    float: right;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+ 
+   
+    
+opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+    
+   
+ 
+opacity: 1;
+    }
+}
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+   
+   
+ 
+ opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInProducts {
+    from {
+        opacity: 0;
+    }
+    to {
+ 
+   
+ 
+   opacity: 1;
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    
+to {
+ 
+ 
+      opacity: 1;
+        transform: translateY(0);
+    }
+}
